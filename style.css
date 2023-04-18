@@ -1,0 +1,147 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 255px 285px 255px 255px;
+  grid-template-rows: 280px 265px;
+  grid-template-areas: "one one two three" "four five five three";
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 8px;
+  z-index: -2;
+}
+.card_name {
+  display: block;
+  padding-bottom: 3px;
+}
+.card_name-dark {
+  color: hsl(0, 0%, 100%);
+}
+.card_name-light {
+  color: hsl(217, 19%, 35%);
+}
+.card_category {
+  display: block;
+  font-size: 0.9rem;
+}
+.card_category-dark {
+  color: hsl(0, 0%, 81%);
+  opacity: 50%;
+}
+.card_category-light {
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+.card_opinion {
+  font-weight: 500px;
+  font-size: 1.7rem;
+  padding: 20px 0;
+}
+.card_opinion-dark {
+  color: hsl(0, 0%, 100%);
+}
+.card_opinion-light {
+  color: hsl(217, 19%, 35%);
+}
+.card_testimonial {
+  font-weight: 400;
+}
+.card_testimonial-dark {
+  color: hsl(0, 0%, 81%);
+  opacity: 70%;
+}
+.card_testimonial-light {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+.card_user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.card_user_photo {
+  border-radius: 50%;
+  height: 30px;
+}
+.card_user_photo-one {
+  border: 2px solid rgb(167, 117, 242);
+}
+.card_user_photo-five {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+.card_user_info {
+  margin-left: 13px;
+  line-height: 12px;
+}
+
+.one {
+  grid-area: one;
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+}
+.one::before {
+  content: open-quote;
+  font-size: 350px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(167, 117, 242);
+  position: absolute;
+  top: -75px;
+  right: 80px;
+  opacity: 40%;
+  z-index: -1;
+}
+
+.two {
+  grid-area: two;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.three {
+  grid-area: three;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.four {
+  grid-area: four;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.five {
+  grid-area: five;
+  background-color: hsl(219, 29%, 14%);
+}

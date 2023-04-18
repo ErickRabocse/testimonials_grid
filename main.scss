@@ -1,0 +1,162 @@
+//RESETS
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//VARIABLES
+//Primary COLORS
+
+$violet: hsl(263, 55%, 52%);
+$light-violet: rgb(167 117 242);
+$dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$whitish: hsl(0, 0%, 100%);
+// Neutral COLORS
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+//ROOT
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+//GLOBAL
+body {
+  background-color: $light-grayish-blue;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+//ATTRIBUTION
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+//MAIN CONTAINER
+.container {
+  display: grid;
+  grid-template-columns: 255px 285px 255px 255px;
+  grid-template-rows: 280px 265px;
+  grid-template-areas:
+    "one one two three"
+    "four five five three";
+  column-gap: 30px;
+  row-gap: 25px;
+}
+//CARDS
+.card {
+  padding: 25px;
+  border-radius: 8px;
+  z-index: -2;
+  &_name {
+    display: block;
+    padding-bottom: 3px;
+    &-dark {
+      color: $whitish;
+    }
+    &-light {
+      color: $dark-grayish-blue;
+    }
+  }
+  &_category {
+    display: block;
+    font-size: 0.9rem;
+    &-dark {
+      color: $light-gray;
+      opacity: 50%;
+    }
+    &-light {
+      color: $dark-grayish-blue;
+      opacity: 50%;
+    }
+  }
+  &_opinion {
+    font-weight: 500px;
+    font-size: 1.7rem;
+    padding: 20px 0;
+    &-dark {
+      color: $whitish;
+    }
+    &-light {
+      color: $dark-grayish-blue;
+    }
+  }
+  &_testimonial {
+    font-weight: 400;
+    &-dark {
+      color: $light-gray;
+      opacity: 70%;
+    }
+    &-light {
+      color: $dark-grayish-blue;
+      opacity: 70%;
+    }
+  }
+  &_user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &_photo {
+      border-radius: 50%;
+      height: 30px;
+      &-one {
+        border: 2px solid $light-violet;
+      }
+      &-five {
+        border: 2px solid $violet;
+      }
+    }
+    &_info {
+      margin-left: 13px;
+      line-height: 12px;
+    }
+  }
+}
+
+//INDIVIDUAL CARDS
+.one {
+  grid-area: one;
+  background-color: $violet;
+  position: relative;
+  &::before {
+    content: open-quote;
+    font-size: 350px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    color: $light-violet;
+    position: absolute;
+    top: -75px;
+    right: 80px;
+    opacity: 40%;
+    z-index: -1;
+  }
+}
+.two {
+  grid-area: two;
+  background-color: $dark-grayish-blue;
+}
+.three {
+  grid-area: three;
+  background-color: $whitish;
+}
+.four {
+  grid-area: four;
+  background-color: $whitish;
+}
+.five {
+  grid-area: five;
+  background-color: $very-dark-blackish-blue;
+}
