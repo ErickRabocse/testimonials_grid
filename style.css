@@ -65,7 +65,7 @@ body {
 @media (max-width: 570px) {
   .container {
     grid-template-columns: 345px;
-    grid-template-rows: 395px 235px 235px 365px 365px;
+    grid-template-rows: 395px 235px 235px 375px 385px;
     grid-template-areas: "one" "two" "four" "five" "three";
   }
 }
