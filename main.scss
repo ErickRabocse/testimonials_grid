@@ -177,6 +177,12 @@ body {
     opacity: 40%;
     z-index: -1;
   }
+  @media (max-width: 570px) {
+    &::before {
+      font-size: 340px;
+      right: 5px;
+    }
+  }
 }
 .two {
   grid-area: two;
