@@ -19,6 +19,16 @@ body {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 880px) {
+  body {
+    height: 1400px;
+  }
+}
+@media (max-width: 570px) {
+  body {
+    height: 1800px;
+  }
+}
 
 .attribution {
   font-size: 11px;
@@ -37,6 +47,27 @@ body {
   grid-template-areas: "one one two three" "four five five three";
   column-gap: 30px;
   row-gap: 25px;
+}
+@media (max-width: 1170px) {
+  .container {
+    grid-template-columns: 255px 285px 255px;
+    grid-template-rows: 280px 265px 265px;
+    grid-template-areas: "one one two " "four five five" "three three three";
+  }
+}
+@media (max-width: 880px) {
+  .container {
+    grid-template-columns: 565px;
+    grid-template-rows: 280px 190px 190px 280px 280px;
+    grid-template-areas: "one" "two" "four" "five" "three";
+  }
+}
+@media (max-width: 570px) {
+  .container {
+    grid-template-columns: 345px;
+    grid-template-rows: 395px 235px 235px 365px 365px;
+    grid-template-areas: "one" "two" "four" "five" "three";
+  }
 }
 
 .card {
@@ -120,7 +151,7 @@ body {
   font-weight: 700;
   color: rgb(167, 117, 242);
   position: absolute;
-  top: -75px;
+  top: -70px;
   right: 80px;
   opacity: 40%;
   z-index: -1;

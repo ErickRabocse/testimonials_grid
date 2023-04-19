@@ -33,6 +33,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 880px) {
+    height: 1400px;
+  }
+  @media (max-width: 570px) {
+    height: 1800px;
+  }
 }
 
 //ATTRIBUTION
@@ -55,6 +61,34 @@ body {
     "four five five three";
   column-gap: 30px;
   row-gap: 25px;
+  @media (max-width: 1170px) {
+    grid-template-columns: 255px 285px 255px;
+    grid-template-rows: 280px 265px 265px;
+    grid-template-areas:
+      "one one two "
+      "four five five"
+      "three three three";
+  }
+  @media (max-width: 880px) {
+    grid-template-columns: 565px;
+    grid-template-rows: 280px 190px 190px 280px 280px;
+    grid-template-areas:
+      "one"
+      "two"
+      "four"
+      "five"
+      "three";
+  }
+  @media (max-width: 570px) {
+    grid-template-columns: 345px;
+    grid-template-rows: 395px 235px 235px 365px 365px;
+    grid-template-areas:
+      "one"
+      "two"
+      "four"
+      "five"
+      "three";
+  }
 }
 //CARDS
 .card {
@@ -138,7 +172,7 @@ body {
     font-weight: 700;
     color: $light-violet;
     position: absolute;
-    top: -75px;
+    top: -70px;
     right: 80px;
     opacity: 40%;
     z-index: -1;
