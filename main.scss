@@ -180,6 +180,7 @@ body {
   @media (max-width: 570px) {
     &::before {
       font-size: 340px;
+      top: -65px;
       right: 5px;
     }
   }
